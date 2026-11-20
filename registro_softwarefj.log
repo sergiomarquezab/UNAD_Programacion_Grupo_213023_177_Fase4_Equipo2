@@ -1,0 +1,67 @@
+2026-11-19 23:04:09 | INFO     | main | ==========================================================
+2026-11-19 23:04:09 | INFO     | main | INICIO DE SIMULACIÓN OPERATIVA - SOFTWARE FJ
+2026-11-19 23:04:09 | INFO     | main | ==========================================================
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 01: Registrar cliente válido (Laura Mendoza) ---
+2026-11-19 23:04:09 | INFO     | gestor | Cliente registrado exitosamente: Cliente #101 | Nombre: Laura Mendoza | Correo: laura.mendoza@correo.com | Teléfono: 3014567890
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=101)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 02: Registrar cliente válido (Andrés Gómez) ---
+2026-11-19 23:04:09 | INFO     | gestor | Cliente registrado exitosamente: Cliente #102 | Nombre: Andrés Gómez | Correo: andres.gomez@empresa.co | Teléfono: 3159876543
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=102)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 03: Registrar cliente válido (Camila Torres) ---
+2026-11-19 23:04:09 | INFO     | gestor | Cliente registrado exitosamente: Cliente #103 | Nombre: Camila Torres | Correo: camila.t@dominio.org | Teléfono: 6063214567
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=103)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 04: Registrar cliente con ID duplicado (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al registrar cliente (ID=101): [ERR-CLI] Ya existe un cliente registrado con el ID 101.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=101)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 05: Registrar cliente con correo inválido (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al registrar cliente (ID=104): [ERR-CLI] El correo electrónico 'mateo_sin_arroba.com' no tiene un formato válido.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=104)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 06: Registrar cliente con nombre numérico (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al registrar cliente (ID=105): [ERR-CLI] El nombre 'Carlos 123' no puede contener dígitos numéricos.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: registrar_cliente (ID=105)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 07: Crear servicio válido: Sala Ejecutiva (capacidad 12) ---
+2026-11-19 23:04:09 | INFO     | gestor | Servicio creado exitosamente: [SAL-01] Sala Ejecutiva Norte | Tarifa base: $60,000.00 | Estado: Disponible | Capacidad: 12 personas
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_servicio (Código=SAL-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 08: Crear servicio válido: Estación MacBook Pro ---
+2026-11-19 23:04:09 | INFO     | gestor | Servicio creado exitosamente: [EQP-01] MacBook Pro M3 | Tarifa base: $45,000.00 | Estado: Disponible | Equipo: Computador Portátil
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_servicio (Código=EQP-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 09: Crear servicio válido: Consultoría Arquitectura Cloud ---
+2026-11-19 23:04:09 | INFO     | gestor | Servicio creado exitosamente: [ASE-01] Consultoría Cloud | Tarifa base: $95,000.00 | Estado: Disponible | Área: Infraestructura
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_servicio (Código=ASE-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 10: Crear servicio y deshabilitar disponibilidad (VideoBeam 4K) ---
+2026-11-19 23:04:09 | INFO     | gestor | Servicio creado exitosamente: [EQP-02] VideoBeam Laser 4K | Tarifa base: $25,000.00 | Estado: Disponible | Equipo: Proyección
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_servicio (Código=EQP-02)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 11: Crear servicio con precio base negativo (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al crear servicio (SAL-99): [ERR-SRV] El precio base ('-15000') debe ser un valor numérico mayor a cero.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_servicio (Código=SAL-99)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 12: Cotizar Sala Ejecutiva por 5 horas (aplica 10% auto + IVA) ---
+2026-11-19 23:04:09 | INFO     | gestor | Cotización Sala Ejecutiva Norte (5 u. | IVA=True | Desc=5%): $305,235.00
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: cotizar_servicio (Código=SAL-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 13: Cotizar Asesoría por 6 horas (4 regulares + 2 con recargo 25%) ---
+2026-11-19 23:04:09 | INFO     | gestor | Cotización Consultoría Cloud (6 u. | IVA=True | Desc=0%): $734,825.00
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: cotizar_servicio (Código=ASE-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 14: Cotizar con descuento fuera de rango 120% (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al cotizar servicio 'EQP-01': [ERR-SRV] El porcentaje de descuento (1.2) debe estar entre 0.0 y 1.0.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: cotizar_servicio (Código=EQP-01)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 15: Crear reserva válida: Sala Ejecutiva por 4 horas (Laura) ---
+2026-11-19 23:04:09 | INFO     | reserva | Reserva #5001 confirmada | Cliente: Laura Mendoza | Servicio: Sala Ejecutiva Norte | Total: $257,040.00
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_reserva (ID=5001)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 16: Crear reserva válida: MacBook Pro por 3 días (Andrés) ---
+2026-11-19 23:04:09 | INFO     | reserva | Reserva #5002 confirmada | Cliente: Andrés Gómez | Servicio: MacBook Pro M3 | Total: $176,715.00
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_reserva (ID=5002)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 17: Crear reserva con cliente inexistente ID 999 (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al crear reserva #5003: [ERR-CLI] No existe un cliente registrado con el ID 999.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_reserva (ID=5003)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 18: Crear reserva de asesoría por 9 horas - excede límite (ERROR esperado) ---
+2026-11-19 23:04:09 | ERROR    | gestor | Error al crear reserva #5004: [ERR-SRV] La asesoría especializada debe programarse entre 1 y 8 horas por jornada.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_reserva (ID=5004)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 19: Reservar VideoBeam no disponible (ERROR encadenado esperado) ---
+2026-11-19 23:04:09 | ERROR    | reserva | Fallo al procesar Reserva #5005: [ERR-DISP] El servicio 'VideoBeam Laser 4K' (EQP-02) no se encuentra disponible actualmente.
+2026-11-19 23:04:09 | ERROR    | gestor | Error al crear reserva #5005: [ERR-RES] No fue posible procesar la reserva #5005 por indisponibilidad del servicio.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: crear_reserva (ID=5005)
+2026-11-19 23:04:09 | INFO     | main | --- Escenario 20: Cancelar reserva #5001 y reintentar cancelación (ERROR esperado) ---
+2026-11-19 23:04:09 | INFO     | reserva | Reserva #5001 cancelada correctamente.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: cancelar_reserva (ID=5001)
+2026-11-19 23:04:09 | ERROR    | gestor | Error al cancelar reserva #5001: [ERR-RES] La reserva #5001 ya se encuentra cancelada.
+2026-11-19 23:04:09 | INFO     | gestor | Cierre de operación: cancelar_reserva (ID=5001)
+2026-11-19 23:04:09 | INFO     | main | FIN DE SIMULACIÓN | Clientes=3 | Servicios=4 | Reservas=2 | Sistema estable
