@@ -19,3 +19,12 @@ Aplicación modular desarrollada en **Python 3** bajo el paradigma de **Programa
 ├── gestor.py                # Controlador principal en memoria con bloques try/except/else/finally
 ├── main.py                  # Script de simulación con casos válidos e inválidos
 └── registro_softwarefj.log  # Evidencia generada de eventos e incidencias del sistema
+```
+
+## Ejecución
+1. Clonar el repositorio en su equipo local:
+   ```bash
+   git clone https://github.com/sergiomarquezab/UNAD_Programacion_Grupo_213023_177_Fase4_Equipo2.git
+   cd UNAD_Programacion_Grupo_213023_177_Fase4_Equipo2
+   python main.py
+   ```
